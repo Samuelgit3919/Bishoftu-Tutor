@@ -1,0 +1,47 @@
+{
+  "name": "Tutor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Tutor name"
+    },
+    "subjects": {
+      "type": "string",
+      "description": "Subjects taught (comma separated)"
+    },
+    "experience": {
+      "type": "string",
+      "description": "Years of experience"
+    },
+    "availability": {
+      "type": "string",
+      "description": "Availability"
+    },
+    "languages": {
+      "type": "string",
+      "description": "Languages spoken (comma separated)"
+    },
+    "contact_info": {
+      "type": "string",
+      "description": "Contact information"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Admin notes"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Photo URL"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Featured on homepage"
+    }
+  },
+  "required": [
+    "name",
+    "subjects"
+  ]
+}

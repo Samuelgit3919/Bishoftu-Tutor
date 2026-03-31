@@ -1,0 +1,53 @@
+{
+  "name": "TutorApplication",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Applicant full name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "subjects": {
+      "type": "string",
+      "description": "Subjects they teach (comma separated)"
+    },
+    "experience": {
+      "type": "string",
+      "description": "Years of experience"
+    },
+    "availability": {
+      "type": "string",
+      "description": "Availability schedule"
+    },
+    "languages": {
+      "type": "string",
+      "description": "Languages spoken (comma separated)"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Application status"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "subjects"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "TutorRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Student full name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject needed"
+    },
+    "level": {
+      "type": "string",
+      "description": "Grade or level"
+    },
+    "schedule": {
+      "type": "string",
+      "description": "Preferred schedule"
+    },
+    "budget": {
+      "type": "string",
+      "description": "Budget range"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location (optional)"
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "am",
+        "or"
+      ],
+      "default": "en",
+      "description": "Preferred tutoring language"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "assigned",
+        "completed"
+      ],
+      "default": "pending",
+      "description": "Request status"
+    },
+    "assigned_tutor_id": {
+      "type": "string",
+      "description": "Assigned tutor ID"
+    },
+    "assigned_tutor_name": {
+      "type": "string",
+      "description": "Assigned tutor name"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "subject",
+    "level"
+  ]
+}

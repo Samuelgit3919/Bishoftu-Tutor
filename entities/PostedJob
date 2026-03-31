@@ -1,0 +1,62 @@
+{
+  "name": "PostedJob",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Job title e.g. 'Math Tutor Needed \u2013 Grade 10'"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject"
+    },
+    "level": {
+      "type": "string",
+      "description": "Grade or level"
+    },
+    "schedule": {
+      "type": "string",
+      "description": "Preferred schedule"
+    },
+    "budget": {
+      "type": "string",
+      "description": "Budget range"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location"
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "am",
+        "or"
+      ],
+      "default": "en"
+    },
+    "description": {
+      "type": "string",
+      "description": "Additional details about the job"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "filled",
+        "closed"
+      ],
+      "default": "open",
+      "description": "Job posting status"
+    },
+    "source_request_id": {
+      "type": "string",
+      "description": "Original TutorRequest ID this was created from"
+    }
+  },
+  "required": [
+    "title",
+    "subject",
+    "level"
+  ]
+}

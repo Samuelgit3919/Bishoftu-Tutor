@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { mockDatabase as base44 } from '@/lib/mockApi';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';

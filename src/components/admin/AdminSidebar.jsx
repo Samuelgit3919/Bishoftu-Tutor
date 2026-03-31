@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, FileText, UserCheck, Users, LinkIcon, LogOut, GraduationCap, Briefcase } from 'lucide-react';
-import { base44 } from '@/api/base44Client';
+import { useAuth } from '@/lib/AuthContext';
 
 const links = [
     { path: '/admin', label: 'Dashboard', icon: LayoutDashboard },
@@ -14,6 +14,7 @@ const links = [
 
 export default function AdminSidebar() {
     const location = useLocation();
+    const { logout } = useAuth();
 
     return (
         <aside className="w-64 bg-card border-r border-border min-h-screen hidden lg:flex flex-col">
@@ -48,7 +49,7 @@ export default function AdminSidebar() {
             </nav>
             <div className="p-3 border-t border-border">
                 <button
-                    onClick={() => base44.auth.logout('/')}
+                    onClick={() => logout()}
                     className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors w-full"
                 >
                     <LogOut className="w-4 h-4" />

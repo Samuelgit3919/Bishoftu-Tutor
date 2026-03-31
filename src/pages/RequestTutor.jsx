@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/lib/i18n.jsx';
-import { base44 } from '@/api/base44Client';
+import { mockDatabase as base44 } from '@/lib/mockApi';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';

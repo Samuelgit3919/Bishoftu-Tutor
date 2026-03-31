@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '@/lib/theme.jsx';
 import { Button } from '@/components/ui/button';
 import { Sun, Moon, Menu, X, LayoutDashboard, FileText, UserCheck, Users, LinkIcon, LogOut, GraduationCap } from 'lucide-react';
-import { base44 } from '@/api/base44Client';
+import { useAuth } from '@/lib/AuthContext';
 import AdminNotifications from './AdminNotification';
 
 const links = [
@@ -18,6 +18,7 @@ export default function AdminHeader() {
     const { theme, toggleTheme } = useTheme();
     const [mobileOpen, setMobileOpen] = useState(false);
     const location = useLocation();
+    const { logout } = useAuth();
 
     return (
         <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border">
@@ -65,7 +66,7 @@ export default function AdminHeader() {
                         </Link>
                     ))}
                     <button
-                        onClick={() => base44.auth.logout('/')}
+                        onClick={() => logout()}
                         className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-destructive w-full"
                     >
                         <LogOut className="w-4 h-4" />

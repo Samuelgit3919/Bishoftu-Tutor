@@ -64,20 +64,18 @@ export default function Navbar() {
                     <div className="flex items-center gap-2">
                         {/* Language Switcher */}
                         <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground">
-                                    <Globe className="w-4 h-4" />
-                                    <span className="text-xs font-semibold">{langLabels[lang]}</span>
-                                </Button>
+                            <DropdownMenuTrigger className="flex items-center gap-1.5 px-3 py-1.5 rounded-md hover:bg-accent text-muted-foreground text-xs font-semibold outline-none transition-colors">
+                                <Globe className="w-4 h-4" />
+                                <span>{langLabels[lang]}</span>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end">
-                                <DropdownMenuItem onClick={() => setLang('en')}>
+                            <DropdownMenuContent align="end" className="z-[100]">
+                                <DropdownMenuItem onSelect={() => setLang('en')} className="cursor-pointer">
                                     English
                                 </DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setLang('am')}>
+                                <DropdownMenuItem onSelect={() => setLang('am')} className="cursor-pointer">
                                     አማርኛ (Amharic)
                                 </DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setLang('or')}>
+                                <DropdownMenuItem onSelect={() => setLang('or')} className="cursor-pointer">
                                     Afaan Oromo
                                 </DropdownMenuItem>
                             </DropdownMenuContent>

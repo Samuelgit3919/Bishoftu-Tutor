@@ -24,6 +24,7 @@ import Tutors from '@/pages/admin/Tutors';
 import Assignments from '@/pages/admin/Assignments';
 import PostedJobs from '@/pages/admin/PostedJob';
 import Jobs from '@/pages/Jobs';
+import Login from '@/pages/Login';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -37,10 +38,8 @@ const AuthenticatedApp = () => {
   }
 
   if (authError) {
-    if (authError.type === 'user_not_registered') {
-      return <UserNotRegisteredError />;
-    } else if (authError.type === 'auth_required') {
-      navigateToLogin();
+    if (authError.type === 'auth_required') {
+      window.location.href = '/login';
       return null;
     }
   }
@@ -55,6 +54,7 @@ const AuthenticatedApp = () => {
         <Route path="/ai-experience" element={<AIExperience />} />
         <Route path="/jobs" element={<Jobs />} />
       </Route>
+      <Route path="/login" element={<Login />} />
 
       {/* Admin routes */}
       <Route path="/admin" element={<AdminLayout />}>

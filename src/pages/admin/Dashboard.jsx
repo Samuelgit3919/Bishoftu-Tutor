@@ -1,5 +1,5 @@
 import React from 'react';
-import { base44 } from '@/api/base44Client';
+import { mockDatabase as base44 } from '@/lib/mockApi';
 import { useQuery } from '@tanstack/react-query';
 import { FileText, UserCheck, Users, LinkIcon } from 'lucide-react';
 import StatsCard from '@/components/admin/StatsCard';

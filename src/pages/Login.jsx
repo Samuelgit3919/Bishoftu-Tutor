@@ -40,7 +40,7 @@ export default function Login() {
                 </span>
             </Link>
 
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="w-full max-w-md bg-card border border-border/50 rounded-2xl p-8 shadow-sm"
@@ -59,18 +59,18 @@ export default function Login() {
                             {error}
                         </div>
                     )}
-                    
+
                     <div className="space-y-1.5">
                         <label className="text-sm font-medium">Email Address</label>
                         <div className="relative">
                             <Mail className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                            <Input 
-                                type="email" 
+                            <Input
+                                type="email"
                                 placeholder="admin@tutorhub.com"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="pl-9"
-                                required 
+                                required
                             />
                         </div>
                     </div>
@@ -79,13 +79,13 @@ export default function Login() {
                         <label className="text-sm font-medium">Password</label>
                         <div className="relative">
                             <Lock className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                            <Input 
-                                type="password" 
+                            <Input
+                                type="password"
                                 placeholder="••••••••"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="pl-9"
-                                required 
+                                required
                             />
                         </div>
                     </div>
